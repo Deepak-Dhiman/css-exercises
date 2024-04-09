@@ -1,0 +1,19 @@
+.odd-elements {
+  background-color: #ffa7a7;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.odd-elements.size {
+  font-size: 24px;
+}
+
+#even-elem-one {
+  color: #0000ff;
+  font-size: 36px;
+}
+
+#even-elem-two {
+  background-color: #80ff80;
+  font-size: 24px;
+  font-weight: 700;
+}
