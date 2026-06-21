@@ -4,6 +4,11 @@
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 4px;
+
   text-align: center;
 }
 
@@ -16,20 +21,42 @@
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-column: 1 / -1;
+  align-items: center;
+
   background-color: #393f4d;
 }
 
 .nav ul,
 .menu ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+
   font-size: 16px;
   list-style-type: none;
 }
 
+.menu ul {
+  grid-template-columns: repeat(4, 20%);
+  justify-content: end;
+}
+
 .sidebar {
-  background-color: #C50208;
+  display: grid;
+  gap: 50px;
+  grid-column: 1;
+  grid-row: 2 / 4;
+
+  background-color: #c50208;
 }
 
 .sidebar .photo {
+  display: grid;
+  align-items: center;
+
   background-color: white;
   color: black;
   font-size: 12px;
@@ -37,8 +64,10 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
+  display: grid;
+  align-items: center;
+
   background-color: white;
   color: black;
   font-size: 16px;
@@ -46,7 +75,9 @@
 }
 
 .nav {
-  background-color: #C50208;
+  grid-column: 2;
+
+  background-color: #c50208;
 }
 
 .nav ul li {
@@ -54,6 +85,11 @@
 }
 
 .article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  grid-column: 2;
+
   background-color: #bccbde;
 }
 
@@ -65,8 +101,9 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
+  block-size: 200px;
   text-align: center;
 }
 
@@ -82,6 +119,8 @@
 }
 
 .footer {
+  grid-column: 1 / -1;
+
   background-color: #393f4d;
 }
 
